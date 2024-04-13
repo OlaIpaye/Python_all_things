@@ -14,3 +14,24 @@ for letter in text: #Use a for loop to iterate over each letter in the string
     else: #If it is, I will increment the count for each letter.
         letter_counts[letter] = letter_counts[letter] + 1
 print(letter_counts) #Print out the output of the code to the terminal.
+
+# End
+
+
+# Write this function that counts the number of words by how many letters they have.
+
+def count_words_by_length(words):
+    word_length_frequency = {} #created an empty dictionary
+    for word in words: #Use a for loop to iterate through every word in the function
+        word_length = len(word) #Use the len function to get the length of every word and assign to new variable
+        if word_length not in word_length_frequency: #Then if the word is not in the empty dictionary already, set it to 1 because there is a word with the length of 1 in the function.
+            word_length_frequency[word_length] = 1
+        else: #If it is, get the current value of the word and then add 1 to it and then set it to the current word length.
+            word_length_frequency[word_length] = word_length_frequency[word_length] = 1
+    print(word_length_frequency) #Print the output.
+
+
+count_words_by_length(["hat", "cat", "I", "bird"])
+
+
+# End
