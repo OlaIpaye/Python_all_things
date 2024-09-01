@@ -43,4 +43,5 @@ a = [1, 2, 3]
 b = a[:] #new list that is a copy of a, but doesn't change the original list
 a.append(4) # original list as now been changed to [1, 2, 3, 4] because of the .append method
 
-print(a)
+print(a) # Output: [1, 2, 3, 4]
+print(b) # Output: [1, 2, 3]
