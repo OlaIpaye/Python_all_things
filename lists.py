@@ -20,18 +20,27 @@
 
 #END
 
-# A list of ages
-people_ages = [40, 10, 11.5, 28, 34, 69]
+# # A list of ages
+# people_ages = [40, 10, 11.5, 28, 34, 69]
 
-#Create a copy of the list above using list constructor and save in new variable
-copy_people_ages = list(people_ages)
+# #Create a copy of the list above using list constructor and save in new variable
+# copy_people_ages = list(people_ages)
 
-#Create a copy of the list above using the copy method and save in new variable
-copy_people_ages1 = people_ages.copy()
+# #Create a copy of the list above using the copy method and save in new variable
+# copy_people_ages1 = people_ages.copy()
 
-# Reassign an element in the original list, without changing the original people_ages list
-copy_people_ages[1] = 20
+# # Reassign an element in the original list, without changing the original people_ages list
+# copy_people_ages[1] = 20
 
-print(people_ages)
-print(copy_people_ages) # Replaces the 10 with 20.
-print(copy_people_ages1)
+# print(people_ages)
+# print(copy_people_ages) # Replaces the 10 with 20.
+# print(copy_people_ages1)
+
+#END
+
+# list with the slice operator[:] and append method
+a = [1, 2, 3]
+b = a[:] #new list that is a copy of a, but doesn't change the original list
+a.append(4) # original list as now been changed to [1, 2, 3, 4] because of the .append method
+
+print(a)
