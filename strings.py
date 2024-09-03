@@ -12,11 +12,18 @@
 # END
 
 # using format() method, using numbered placeholders {0}, {1}, {2} etc., to specify the order in which values should be inserted or reused.
-name = "Oladimeji"
-age = 30
-exp = 10
-message = "My name is {0}. I am {1} years old and I have {2} years of experience in data.".format(name, age, exp)
+# name = "Oladimeji"
+# age = 30
+# exp = 10
+# message = "My name is {0}. I am {1} years old and I have {2} years of experience in data.".format(name, age, exp)
 
-print(message)
+# print(message)
 
 # END
+
+# Working with multi-line strings with len function
+note_to_self = """I am a very passionate and focused individual 
+when my back is up against the wall, interesting."""
+
+print(note_to_self)
+print(len(note_to_self))
