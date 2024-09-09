@@ -11,7 +11,7 @@
 
 # END
 
-# using format() method, using numbered placeholders {0}, {1}, {2} etc., to specify the order in which values should be inserted or reused.
+# using format() method, with numbered placeholders {0}, {1}, {2} etc., to specify the order in which values should be inserted or reused.
 # name = "Oladimeji"
 # age = 30
 # exp = 10
@@ -22,8 +22,41 @@
 # END
 
 # Working with multi-line strings with len function
-note_to_self = """I am a very passionate and focused individual 
-when my back is up against the wall, interesting."""
+# note_to_self = """I am a very passionate and focused individual 
+# when my back is up against the wall, interesting."""
 
-print(note_to_self)
-print(len(note_to_self))
+# print(note_to_self)
+# print(len(note_to_self))
+
+# END
+
+# Using endswith() string method
+# file_name_1 = "quaterly_report.pdf" # Could be file name or file path within the string to verify file formats before processing financial reports.
+
+# if file_name_1.endswith(".pdf"): # Checks if the string ends with the specified suffix.
+#     print("This file is a pdf document.")
+
+# Using endswith() string method with a function with default parameters
+def validate_file_format(file_name, required_format = ".pdf"): # use of parameters with default values makes your functions more flexible and reusable with other file types other than just the specified pdf files. See the 4 examples below...
+    if file_name.endswith(required_format):
+        return "Valid Format."
+    else:
+        return "Invalid Format."
+    
+report_filename = "accounting.pdf"
+validate_report = validate_file_format(report_filename, ".pdf")
+print(validate_report)
+# Output: Valid Format.
+    
+result_pdf = validate_file_format("banking.pdf", ".pdf")
+print(result_pdf)
+# Output: Valid Format.
+    
+result_csv = validate_file_format("sales.csv", ".csv")
+print(result_csv)
+# Output: Valid Format.
+
+result_docs = validate_file_format("transaction.docs", ".docs")
+print(result_docs)
+# Output: Valid Format.
+
