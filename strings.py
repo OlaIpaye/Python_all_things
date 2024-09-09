@@ -37,41 +37,66 @@
 #     print("This file is a pdf document.")
 
 # Using endswith() string method with a function with default parameters
-def validate_file_format(file_name, required_format = ".pdf"): # use of parameters with default values makes your functions more flexible and reusable with other file types other than just the specified pdf files. See the 4 examples below...
-    if file_name.endswith(required_format):
-        return "Valid Format."
-    else:
-        return "Invalid Format."
+# def validate_file_format(file_name, required_format = ".pdf"): # use of parameters with default values makes your functions more flexible and reusable with other file types other than just the specified pdf files. See the 4 examples below...
+#     if file_name.endswith(required_format):
+#         return "Valid Format."
+#     else:
+#         return "Invalid Format."
     
-report_filename = "accounting.pdf"
-validate_report = validate_file_format(report_filename, ".pdf")
-print(validate_report)
-# Output: Valid Format.
+# report_filename = "accounting.pdf"
+# validate_report = validate_file_format(report_filename, ".pdf")
+# print(validate_report)
+# # Output: Valid Format.
     
-result_pdf = validate_file_format("banking.pdf", ".pdf")
-print(result_pdf)
-# Output: Valid Format.
+# result_pdf = validate_file_format("banking.pdf", ".pdf")
+# print(result_pdf)
+# # Output: Valid Format.
     
-result_csv = validate_file_format("sales.csv", ".csv")
-print(result_csv)
-# Output: Valid Format.
+# result_csv = validate_file_format("sales.csv", ".csv")
+# print(result_csv)
+# # Output: Valid Format.
 
-result_docs = validate_file_format("transaction.docs", ".docs")
-print(result_docs)
-# Output: Valid Format.
+# result_docs = validate_file_format("transaction.docs", ".docs")
+# print(result_docs)
+# # Output: Valid Format.
 
 # Using endswith() string method with a function alongside multiple conditions using if/elif/else statements - This example shows how the .endswith() method can play a crucial role in ensuring data integrity, security, and efficient processing.
-def process_file_based_on_type(filename):
-    if filename.endswith(".pdf"):
-        return "Load to transaction database."
-    elif filename.endswith(".csv"):
-        return "Load to wise bank data exchange."
-    elif filename.endswith(".docs"):
-        return "Integrate with internal API"
-    else:
-        return "Invalid file format."
+# def process_file_based_on_type(filename):
+#     if filename.endswith(".pdf"):
+#         return "Load to transaction database."
+#     elif filename.endswith(".csv"):
+#         return "Load to wise bank data exchange."
+#     elif filename.endswith(".docs"):
+#         return "Integrate with internal API"
+#     else:
+#         return "Invalid file format."
 
-# File received from a data feed
-data_feed_file = "daily_transactions.csv"
-process_data = process_file_based_on_type(data_feed_file)
-print(process_data)  # Output: "Load to wise bank data exchange."
+# # File received from a data feed
+# data_feed_file = "daily_transactions.csv"
+# process_data = process_file_based_on_type(data_feed_file)
+# print(process_data)
+# # Output: "Load to wise bank data exchange."
+
+# END
+
+# Using startswith() string method
+# new_filename = "Deposit: £100"
+# if new_filename.startswith("Deposit"):
+#     print("This is the correct transaction")
+
+# Using startswith() string method with a function alongside multiple conditions using if/elif/else statements - This example shows how the startswith() string method can be used with a function alongside multiple entries to help classify transaction type based on their description.
+def classify_transaction(transaction_description):
+    if transaction_description.startswith("DEP"):
+        return "Deposit"
+    elif transaction_description.startswith("WDL"):
+        return "Withdrawal"
+    elif transaction_description.startswith("TRF"):
+        return "Transfer"
+    else:
+        return "Other"
+
+# Example usage in a banking context
+transaction = "DEP12345678"
+transaction_type = classify_transaction(transaction)
+print(transaction_type)
+# Output: "Deposit"
