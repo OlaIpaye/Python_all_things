@@ -32,16 +32,21 @@
 # # Reassign an element in the original list, without changing the original people_ages list
 # copy_people_ages[1] = 20
 
-# print(people_ages)
-# print(copy_people_ages) # Replaces the 10 with 20.
-# print(copy_people_ages1)
+# copy_people_ages1[2] = 21
+
+# print(copy_people_ages) # Replaces the index one which is 10, with 20.
+# print(people_ages) # original
+# print(copy_people_ages1) # Replaces the index two which is 11.5, with 21.
 
 #END
 
 # list with the slice operator[:] and append method
 a = [1, 2, 3]
-b = a[:] #new list that is a copy of a, but doesn't change the original list
-a.append(4) # original list as now been changed to [1, 2, 3, 4] because of the .append method
+b = a[:] # creates new list that is a copy of a, but doesn't change the original list
+a.append(4) # original list as now been changed to [1, 2, 3, 4] because of the .append() method
+
+if 4 in a:
+    print("4 is in list a.") # Output: 4 is in list a.
 
 print(a) # Output: [1, 2, 3, 4]
 print(b) # Output: [1, 2, 3]

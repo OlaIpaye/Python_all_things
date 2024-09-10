@@ -100,3 +100,7 @@ transaction = "DEP12345678"
 transaction_type = classify_transaction(transaction)
 print(transaction_type)
 # Output: "Deposit"
+
+# END
+
+#
