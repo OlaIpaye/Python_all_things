@@ -61,3 +61,9 @@ a.append(4) # original list as now been changed to [1, 2, 3, 4] because of the .
 # print(square_root)
 # Output: [1.0, 1.4142135623730951, 1.7320508075688772, 2.0, 2.23606797749979, 2.449489742783178, 2.6457513110645907, 2.8284271247461903, 3.0, 3.1622776601683795]
 
+# Filter Out Positive Numbers - Given a list of numbers, use list comprehension to create a new list that contains only the positive numbers from the original list.
+numbers = [-10, -5, 0, 5, 10, 15]
+
+positive_numbers = [number for number in numbers if number > 0]
+print(positive_numbers)
+# Output: [5, 10, 15]
