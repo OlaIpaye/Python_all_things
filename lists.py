@@ -45,8 +45,19 @@ a = [1, 2, 3]
 b = a[:] # creates new list that is a copy of a, but doesn't change the original list
 a.append(4) # original list as now been changed to [1, 2, 3, 4] because of the .append() method
 
-if 4 in a:
-    print("4 is in list a.") # Output: 4 is in list a.
+# if 4 in a:
+#     print("4 is in list a.") # Output: 4 is in list a.
 
-print(a) # Output: [1, 2, 3, 4]
-print(b) # Output: [1, 2, 3]
+# print(a) # Output: [1, 2, 3, 4]
+# print(b) # Output: [1, 2, 3]
+
+# END
+
+# List Comprehension
+
+# Create a List of Square Roots - Write a list comprehension to create a list of square roots for all numbers from 1 to 10
+# import math
+# square_root = [math.sqrt(i) for i in range(1, 11)]
+# print(square_root)
+# Output: [1.0, 1.4142135623730951, 1.7320508075688772, 2.0, 2.23606797749979, 2.449489742783178, 2.6457513110645907, 2.8284271247461903, 3.0, 3.1622776601683795]
+
