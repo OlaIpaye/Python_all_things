@@ -13,8 +13,13 @@ print(birthday.now()) # getting the date for the present time
 
 print(f"It's been {datetime.now() - datetime(2025, 2, 8)} since my birthday!") # using datetime module to get time difference
 
-parse_date = datetime.strptime("Feb 8, 2025", "%b %d, %Y")
+parse_date = datetime.strptime("Feb 8, 2025", "%b %d, %Y") # using strptime function to create a datetime from a string
 print(parse_date.year)
 print(parse_date.month)
 print(parse_date.day)
+
+
+# using strftime function to create a string from a datetime
+date_string = datetime.strftime(datetime.now(), "%b %d, %Y")
+print(date_string)
 
